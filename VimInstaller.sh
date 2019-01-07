@@ -4,17 +4,16 @@ if ! [ -x "$(command -v vim)" ]; then
     apt-get install vim
 fi
 
-mkdir .vim .vim/colors
+mkdir -p .vim/colors
 
-curl https://raw.githubusercontent.com/dsolstad/vim-wombat256i/master/colors/wombat256i.vim --output ~/.vim/colors/wombat256i.vim
+curl -s https://raw.githubusercontent.com/dsolstad/vim-wombat256i/master/colors/wombat256i.vim --output ~/.vim/colors/wombat256i.vim
 
 echo syntax on > ~/.vimrc
 echo colorscheme wombat256i >> ~/.vimrc
 echo set number >> ~/.vimrc
-echo >> ~/.vimrc
 
-if [ -f "~/.vimrc" ]; then
-    echo "Successfully Finished"
+if [ -f ~/.vimrc ]; then
+    echo Successfully Finished
 else
-    echo "Unsuccessfully Finished"
+    echo Unsuccessfully Finished
 fi
