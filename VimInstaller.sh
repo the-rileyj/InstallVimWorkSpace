@@ -10,3 +10,11 @@ curl https://raw.githubusercontent.com/dsolstad/vim-wombat256i/master/colors/wom
 
 echo syntax on > ~/.vimrc
 echo colorscheme wombat256i >> ~/.vimrc
+echo set number >> ~/.vimrc
+echo >> ~/.vimrc
+
+if [ -f "~/.vimrc" ]; then
+    echo "Successfully Finished"
+else
+    echo "Unsuccessfully Finished"
+fi
